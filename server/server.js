@@ -4,6 +4,7 @@ const app = express();
 
 /** Config */
 require('./database');
+require('./passport');
 
 /** Middleware */
 app.use(express.json());

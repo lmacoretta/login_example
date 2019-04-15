@@ -5,6 +5,7 @@ require('dotenv').config();
 
 
 /** Database */
+mongoose.set('useCreateIndex', true); //Me tiraba un warning y con esto se soluciono.
 mongoose.connect('mongodb://localhost:27017/login', {useNewUrlParser: true}).then(db => console.log('Base de datos conectada'));
 
 

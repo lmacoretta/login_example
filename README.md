@@ -19,4 +19,13 @@ JWT.sign({
   payload
 }, 'secret', { expiresIn: '1h' });
 
-Nota: Para hacer mas facil la autenticacion con jsonwebtoken voy utilizar passport.
+
+<b>Passport</b>
+
+Passport es un middleware para nodejs. Utiliza "strategies" para diferentes autentificaciones (Local, facebook, Google, etc). Tambien tiene una para jwt. En este proyecto cree un archivo separado de passport para hacer todas las strategies ahi. La primera es de Jwt, donde lo primero hay que configurarla dentro de un objeto.
+La primer variable (jwtFromRequest) es de donde viene el token. Para eso tengo que extraerlo del header. Y la segunda variable (secretOrKey) es la clave secreta de nuestra autentificacion.
+Luego de esto ejecuta una funcion con el payload. Este payload es la info que le mande con la funcion sign anteriormente mencionada.
+
+Con localStrategy es algo parecido, lo unico en la configuracion le tengo que decir que en mes de utilizar el nombre de usuario por defecto para logearse, utilice el email. Si quisiera agregar autentificacion de Google o Facebook utilizaria sus respectivas strategies.
+
+Documentacion de passport: https://www.npmjs.com/package/passport

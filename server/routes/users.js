@@ -12,8 +12,8 @@ signToken = user => {
       iss: 'loginExample',
       sub: user.id,
       iat: new Date().getTime(),
-      exp: new Date().setDate(new Date().getDate() + 1) //el dia actual + 1
-   }, 'authenticationExample')
+      //exp: new Date().setDate(new Date().getDate() + 1) //el dia actual + 1
+   }, 'authenticationExample', { expiresIn: '1d' })
 }
 
 /** Registro */

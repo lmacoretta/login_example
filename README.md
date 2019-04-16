@@ -22,7 +22,7 @@ JWT.sign({
 
 <b>Passport</b>
 
-Passport es un middleware para nodejs. Utiliza "strategies" para diferentes autentificaciones (Local, facebook, Google, etc). Tambien tiene una para jwt. En este proyecto cree un archivo separado de passport para hacer todas las strategies ahi. La primera es de Jwt, donde lo primero hay que configurarla dentro de un objeto.
+Passport es un middleware para nodejs. Utiliza "strategies" para diferentes autentificaciones (Local, facebook, Google, etc). Tambien tiene una para jwt. En este proyecto cree un archivo separado de passport para hacer todas las strategies ahi. La primera es de Jwt. En esta, hay un objeto donde va su configuracion.
 La primer variable (jwtFromRequest) es de donde viene el token. Para eso tengo que extraerlo del header. Y la segunda variable (secretOrKey) es la clave secreta de nuestra autentificacion.
 Luego de esto ejecuta una funcion con el payload. Este payload es la info que le mande con la funcion sign anteriormente mencionada.
 
